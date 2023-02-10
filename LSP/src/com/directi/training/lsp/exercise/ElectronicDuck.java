@@ -5,6 +5,15 @@ public class ElectronicDuck extends Duck
     private boolean _on = false;
 
     @Override
+    public boolean canQuack() {
+        return _on;
+    }
+
+    @Override
+    public boolean canSwim() {
+        return _on;
+    }
+
     public void quack()
     {
         if (_on) {
@@ -14,7 +23,6 @@ public class ElectronicDuck extends Duck
         }
     }
 
-    @Override
     public void swim()
     {
         if (_on) {

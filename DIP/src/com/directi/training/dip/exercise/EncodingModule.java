@@ -12,6 +12,10 @@ import java.util.Base64;
 
 public class EncodingModule
 {
+    private IDatabase _database;
+    public EncodingModule(IDatabase database){
+        _database = database;
+    }
     public void encodeWithFiles() throws IOException
     {
         BufferedReader reader = null;
@@ -52,8 +56,7 @@ public class EncodingModule
         }
         String inputString = inputString1.toString();
         String encodedString = Base64.getEncoder().encodeToString(inputString.getBytes());
-        MyDatabase database = new MyDatabase();
-        database.write(encodedString);
+        _database.write(encodedString);
     }
 }
 
