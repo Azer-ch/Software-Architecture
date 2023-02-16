@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/class-diagram
+class ResourceAllocator{
+    + void free(ISlot slot)
+    + int allocate(ISlot slot))
+}
+interface ISlot {
+    + void free(int resourceId)
+    + int allocate()
+}
+class SpaceSlot implements ISlot{
+    + void free(int resourceId)
+    + int allocate()
+    - void markSpaceSlotFree(int resourceId)
+    - void markSpaceSlotBusy(int resourceId)
+    - int findFreeSpaceSlot()
+}
+class TimeSlot implements ISlot{
+    + void free(int resourceId)
+    + int allocate()
+    - void markTimeSlotFree(int resourceId)
+    - void markTimeSlotBusy(int resourceId)
+    - int findFreeTimeSlot()
+}
+ResourceAllocator ..> ISlot : use
+@enduml

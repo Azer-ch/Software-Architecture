@@ -1,10 +1,10 @@
-package com.directi.training.isp.exercise;
+package com.directi.training.isp.exercise_refactored;
 
 import java.util.Random;
 
 public class Sensor
 {
-    public void register(Door door)
+    public void register(IProximityDoor door)
     {
         while (true) {
             if (isPersonClose()) {

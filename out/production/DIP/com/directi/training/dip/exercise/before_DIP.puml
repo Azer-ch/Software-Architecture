@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/class-diagram
+class EncodingModule{
+    + void encodeWithFiles() throws IOException
+    + void encodeBasedOnNetworkAndDatabase() throws IOException
+}
+class MyDatabase{
+    - static Map<Integer, String> _data
+    - static int _count = 0
+    + int write(String inputString)
+}
+class EncodingModuleClient{
+    + {static} void main(String[] args) throws IOException
+}
+EncodingModule --> MyDatabase : depends on
+@enduml

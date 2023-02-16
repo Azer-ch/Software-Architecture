@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/class-diagram
+class Duck {
+    + void quack()
+    + void swim()
+}
+class ElectronicDuck extends Duck{
+    - boolean _on = false
+    + void quack()
+    + void swim()
+    + void _turnOn()
+    + void _turnOff()
+}
+class Pool {
+    + void run()
+    - void quack(Duck... ducks)
+    - void swim(Duck... ducks)
+    + static void main(String[] args)
+}
+Pool ..> Duck : use
+@enduml

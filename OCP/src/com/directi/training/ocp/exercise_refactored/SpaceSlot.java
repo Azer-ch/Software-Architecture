@@ -1,6 +1,6 @@
-package com.directi.training.ocp.exercise;
+package com.directi.training.ocp.exercise_refactored;
 
-public class SpaceISlot implements ISlot {
+public class SpaceSlot implements ISlot {
     public void free(int resourceId) {
         markSpaceSlotFree(resourceId);
     }

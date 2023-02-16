@@ -1,6 +1,6 @@
-package com.directi.training.ocp.exercise;
+package com.directi.training.ocp.exercise_refactored;
 
-public class TimeISlot implements ISlot {
+public class TimeSlot implements ISlot {
     @Override
     public void free(int resourceId) {
         markTimeSlotFree(resourceId);

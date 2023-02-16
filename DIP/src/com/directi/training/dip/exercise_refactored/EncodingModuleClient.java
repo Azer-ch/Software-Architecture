@@ -1,4 +1,4 @@
-package com.directi.training.dip.exercise;
+package com.directi.training.dip.exercise_refactored;
 
 import java.io.IOException;
 
@@ -6,7 +6,8 @@ public class EncodingModuleClient
 {
     public static void main(String[] args) throws IOException
     {
-        EncodingModule encodingModule = new EncodingModule();
+        IDatabase database = MyDatabase.getInstance();
+        EncodingModule encodingModule = new EncodingModule(database);
         encodingModule.encodeWithFiles();
         encodingModule.encodeBasedOnNetworkAndDatabase();
     }

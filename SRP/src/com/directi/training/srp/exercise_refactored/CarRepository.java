@@ -1,4 +1,4 @@
-package com.directi.training.srp.exercise;
+package com.directi.training.srp.exercise_refactored;
 
 import java.util.Arrays;
 import java.util.List;

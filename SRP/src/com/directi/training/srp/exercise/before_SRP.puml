@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/class-diagram
+class Car {
+    - String _id;
+    - String _model;
+    - String _brand;
+    + Car(String id, String model, String brand)
+    + String getId()
+    + String getModel()
+    + String getBrand()
+}
+class CarManager {
+    - List<Car> _cars;
+    + Car getFromDb(final String carId)
+    + String getCarsNames()
+    + Car getBestCar()
+}
+@enduml
