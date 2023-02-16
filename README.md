@@ -10,10 +10,10 @@
         <li>
             <a href="#OCP">OCP</a></li>
         <li>
-            <a href="#SRP">SRP</a>
+            <a href="#ISP">ISP</a>
         </li>
         <li>
-            <a href="#ISP">ISP</a>
+            <a href="#SRP">SRP</a>
         </li>
         <li>
             <a href="#LSP">LSP</a>
