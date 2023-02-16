@@ -8,23 +8,24 @@
   <summary>SOLID Principles:</summary>
     <ol>
         <li>
-            <a href="##OCP">OCP</a></li>
+            <a href="#OCP">OCP</a></li>
         <li>
-            <a href="##SRP">SRP</a>
+            <a href="#SRP">SRP</a>
         </li>
         <li>
-            <a href="##ISP">ISP</a>
+            <a href="#ISP">ISP</a>
         </li>
         <li>
-            <a href="##LSP">LSP</a>
+            <a href="#LSP">LSP</a>
         </li>
         <li>
-            <a href="##DIP">DIP</a>
+            <a href="#DIP">DIP</a>
         </li>
     </ol>
 </details>
 
-## OCP 
+
+# OCP 
 ### Before Applying the Open-Closed Principle
 #### UML Diagram:
 ![before_OCP](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Azer-ch/Software-Architecture/main/OCP/src/com/directi/training/ocp/exercise/before_OCP.puml) 
@@ -39,7 +40,7 @@ Upon closer inspection of the ResourceAllocator class we notice that both the al
 Instead of having the ResourceAllocator class explicitly defining how to allocate and free resources we created an interface that declares the signature of said methods and upon creating new Resources such as Space and Time, we simply implement the interface and override the methods. This way, the ResourceAllocator class is not affected by the changes made to the Resource class.
 ##### Resource Allocator Class:
 ![resource_allocator_class](screenshots/2.svg)
-## ISP
+# ISP
 ### Before Applying the Interface Segregation Principle
 #### UML Diagram:
 ![before_ISP](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Azer-ch/Software-Architecture/main/ISP/src/com/directi/training/isp/exercise/before_ISP.puml)
@@ -58,7 +59,7 @@ The better approach is to create separate interfaces for each type of door.Thus 
 And now the Sensor and Timer Clients use specifically what they have to use.(the proximityCallback() and the timeOutCallback() methods respectively from the IProximityDoor and ITimeOutDoor interfaces)
 ##### Sensor Client:
 ![sensor_client](screenshots/5.svg)
-## SRP
+# SRP
 ### Before Applying the Single-responsibility Principle
 #### UML Diagram:
 ![before_SRP](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Azer-ch/Software-Architecture/main/SRP/src/com/directi/training/srp/exercise/before_SRP.puml)
@@ -86,7 +87,7 @@ In order to make our code easily maintainable and scalable,We split the CarManag
 
 3- CarComparator : Picks out the best car by the newest model.
 
-## LSP
+# LSP
 ### Before Applying the Liskov Substitution Principle
 #### UML Diagram:
 ![before_LSP](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Azer-ch/Software-Architecture/main/LSP/src/com/directi/training/lsp/exercise/before_LSP.puml)
@@ -109,7 +110,7 @@ Now a simple check on weather a duck can swim or quack is enough to make sure th
 ##### Quack Method of the Pool Class:
 ![quack_method](screenshots/8.svg)
 
-## DIP
+# DIP
 ### Before Applying the Dependency Inversion Principle
 #### UML Diagram:
 ![before_DIP](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Azer-ch/Software-Architecture/main/DIP/src/com/directi/training/dip/exercise/before_DIP.puml)
