@@ -3,7 +3,6 @@ package com.directi.training.lsp.exercise;
 public class ElectronicDuck extends Duck
 {
     private boolean _on = false;
-
     @Override
     public void quack()
     {

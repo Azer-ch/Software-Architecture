@@ -2,7 +2,7 @@ package com.directi.training.isp.exercise_refactored;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-public class TimedDoor implements ITimeOutDoor,IProximityDoor
+public class TimedDoor implements ITimeOutDoor
 {
     private static final int TIME_OUT = 100;
     private boolean _locked;
@@ -45,9 +45,4 @@ public class TimedDoor implements ITimeOutDoor,IProximityDoor
         _locked = true;
     }
 
-    @Override
-    public void proximityCallback()
-    {
-        throw new NotImplementedException();
-    }
 }

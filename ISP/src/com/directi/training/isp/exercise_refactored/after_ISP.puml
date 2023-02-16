@@ -12,7 +12,7 @@ interface IProximityDoor extends Door{
 interface ITimedOutDoor extends Door{
     void timeOutCallback()
 }
-class SensingDoor implements IProximityDoor , ITimedOutDoor
+class SensingDoor implements IProximityDoor
 {
     - boolean _locked;
     - boolean _opened;
@@ -21,10 +21,9 @@ class SensingDoor implements IProximityDoor , ITimedOutDoor
     void unlock()
     void open()
     void close()
-    void timeOutCallback()
     void proximityCallback()
 }
-class TimeDoor implements ITimedOutDoor , IProximityDoor{
+class TimeDoor implements ITimedOutDoor{
     - {static} int TIME_OUT = 100;
     - boolean _locked;
     - boolean _opened;
@@ -34,7 +33,6 @@ class TimeDoor implements ITimedOutDoor , IProximityDoor{
     void open()
     void close()
     void timeOutCallback()
-    void proximityCallback()
 }
 class Sensor{
     + void register(Door door)
