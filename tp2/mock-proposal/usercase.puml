@@ -1,0 +1,12 @@
+@startuml
+skinparam actorStyle awesome
+actor User
+package EvaxApplication{
+usecase "Register for vaccination" as Register
+usecase "Monitor the request's progress" as Monitor
+usecase "check the list of available pharmacies" as Check
+}
+User --> Register
+User --> Monitor
+User --> Check
+@enduml
