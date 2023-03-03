@@ -5,8 +5,12 @@ package EvaxApplication{
 usecase "Register for vaccination" as Register
 usecase "Monitor the request's progress" as Monitor
 usecase "check the list of available pharmacies" as Check
+usecase "View user's information" as View
+usecase "update user's information" as Update
+View .> Update : extends
 }
 User --> Register
 User --> Monitor
 User --> Check
+User --> View
 @enduml

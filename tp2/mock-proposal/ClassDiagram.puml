@@ -1,0 +1,71 @@
+@startuml
+'https://plantuml.com/class-diagram
+package "View" {
+    class UserInfoView {
+        + DisplayUserInfo()
+    }
+    class VaccinationRequestView {
+        + DisplayVaccinationRequestForm()
+    }
+    class VaccinationProgressView {
+        + DisplayVaccinationProgress()
+    }
+    class UpdateUserInfoView {
+        + DisplayUserInfoForm()
+    }
+    class PharmaciesListView() {
+        + DisplayAvailablePharmaciesList()
+    }
+}
+package Model{
+    class UserModel {
+        - name : string
+        - id : UUID
+        - phoneNumber : Integer
+        - cin : Integer
+        - Address : string
+    }
+    class VaccinationRequestModel {
+        - id : UUID
+        - userId : UUID
+        - pharmacyId : UUID
+        + Status : RequestStatusEnum
+    }
+    class VaccinationModel {
+        - id : UUID
+        - vaccinationRequestId : UUID
+        + date : Date
+        + location : string
+        + Status : VaccinationStatusEnum
+    }
+    class PharmacyModel {
+        - id : UUID
+        + name : string
+        + address : string
+        + phoneNumber : Integer
+    }
+}
+package Controller {
+    class UserActivity{
+        + updateUserInfo()
+        + retrieveUserInfo()
+    }
+    class VaccinationActivity{
+        + createVaccinationRequest()
+        + trackVaccinationProgress()
+        + changeVaccinationStatus()
+    }
+    class PharmacyActivity(){
+        + retrievePharmacyList()
+    }
+}
+Enum RequestStatusEnum {
+    PENDING
+    ACCEPTED
+    REJECTED
+}
+Enum VaccinationStatusEnum{
+    VACCINATED
+    AWAITING_VACCINATION
+}
+@enduml
