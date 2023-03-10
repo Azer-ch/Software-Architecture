@@ -1,0 +1,11 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+User -> ForecastService : Visualize sales' forecast
+note left : the user provides the store , product and date
+group user not authenticated
+ForecastService -> AuthenticationService : Authentication Request
+AuthenticationService -> ForecastService : Authentication Response
+end
+ForecastService -> User : Sales Data
+@enduml

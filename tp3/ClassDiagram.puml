@@ -1,0 +1,14 @@
+@startuml
+package Forecast {
+    class User
+    class Store
+    class Product
+    class Sales {
+        -storeID
+        -ProductID
+        +numberOfSales
+        +totalPrice
+        +date
+    }
+}
+@enduml
